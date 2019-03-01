@@ -1,0 +1,12 @@
+background_b: 255
+background_g: 86
+background_r: 1
+rosdistro: 'kinetic
+
+  '
+roslaunch:
+  uris: {host_zhanghaohao_virtual_machine__37473: 'http://zhanghaohao-virtual-machine:37473/'}
+rosversion: '1.12.14
+
+  '
+run_id: 809687e8-3c47-11e9-bcd7-000c2982daa0
