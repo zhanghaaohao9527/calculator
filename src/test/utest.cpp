@@ -2,42 +2,37 @@
 #include <gtest/gtest.h>
 #include <iostream>
 using namespace std;
-TEST(addTwoIntsServer, testCase1){
+TEST(addTwoIntsServer, normal){
 	cout << "testCase1 "; // 输出 testCase1
+	EXPECT_EQ(1, add(1,5));
+    	EXPECT_EQ(1, add(-1,-1));
+	EXPECT_EQ(1, add(-1,1));
+   	 EXPECT_EQ(1, add(9,-8));
 }
 
-TEST(addTwoIntsServer, testCase2){
+TEST(addTwoIntsServer, zero){
 	 cout << "testCase2 "; // 输出 testCase2
-
+	EXPECT_EQ(2, add(0,0));
+	EXPECT_EQ(2, add(0,1));
+	EXPECT_EQ(2, add(-1,0));
 }
 
-TEST(addTwoIntsServer, testCase3){
+TEST(addTwoIntsServer, wrong){
 	 cout << "testCase3 "; // 输出 testCase3
-
-}
-
-TEST(addTwoIntsServer, testCase4){
-         cout << "testCase4 "; // 输出 testCase4
-
-}
-
-TEST(addTwoIntsServer, testCase5){
-         cout << "testCase5 "; // 输出 testCase5
-
+	EXPECT_EQ(3, add(a,b));
+        EXPECT_EQ(3, add(0.1,1));
+        EXPECT_EQ(3, add(99,0.2));
+	EXPECT_EQ(1, add(a,1));
+        EXPECT_EQ(1, add(1,z));
+        EXPECT_EQ(1, add(+,-));
 }
 
 
 
-TEST(addTwoIntsServer, badInput){
-  //TODO - figure out what good error behavior is and test for it properly
-  //EXPECT_EQ(0, meval::EvaluateMathExpression("4.1.3 - 4.1"));
-  //EXPECT_EQ(0, meval::EvaluateMathExpression("4.1.3"));
-}
+
 int main(int argc, char **argv){
 
 	::testing::InitGoogleTest(&argc, argv);
-//    	ros::init(argc, argv, "test_talker");
-  // 	 ros::NodeHandle nh;
    	 return RUN_ALL_TESTS();
 
 }
