@@ -34,3 +34,10 @@ add_dependencies(add_two_ints_server calculator_gencpp)
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 add_dependencies(add_two_ints_client calculator_gencpp)
+
+#test
+catkin_add_gtest(utest src/test/utest.cpp)
+
+#if(CATKIN_ENABLE_TESTING)
+# catkin_add_gtest(myUnitTest test/utest.cpp)
+#endif()

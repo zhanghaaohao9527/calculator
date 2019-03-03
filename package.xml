@@ -58,9 +58,19 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
-<build_depend>message_generation</build_depend>
-<!-- <run_depend>message_runtime</run_depend> -->
-<exec_depend>message_runtime</exec_depend> 
+  <build_depend>message_generation</build_depend>
+  <!-- <run_depend>message_runtime</run_depend> -->
+  <exec_depend>message_runtime</exec_depend> 
+
+
+  <!-- test -->
+  <build_depend>gtrostestest</build_depend>
+  <build_depend>gtest</build_depend>
+  <build_export_depend>rostest</build_export_depend>
+  <build_export_depend>gtest</build_export_depend>
+  <exec_depend>rostest</exec_depend>
+  <exec_depend>gtest</exec_depend>
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

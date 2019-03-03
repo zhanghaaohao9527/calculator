@@ -10,7 +10,7 @@ bool add(calculator::AddTwoInts::Request  &req,
   ROS_INFO("sending back response: [%ld]", (long int)res.sum);
   return true;
 }
-
+/*
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "add_two_ints_server");
@@ -21,4 +21,5 @@ int main(int argc, char **argv)
   ros::spin();
 
   return 0;
-}
+}*/
+
